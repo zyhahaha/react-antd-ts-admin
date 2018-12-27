@@ -26,10 +26,23 @@ const data = [{
   tags: ['cool', 'teacher'],
 }];
 
-function test (tags: string[]) {
+function tagsHandle (tags: string[]) {
   return (
     <span>
       {tags.map((tag: string) => <Tag color="blue" key={tag}>{tag}</Tag>)}
+    </span>
+  )
+}
+
+interface IrecordType {
+  lastName: string,
+}
+function recordHandle (record: IrecordType) {
+  return (
+    <span>
+      <a href="javascript:;">Invite {record.lastName}</a>
+      <Divider type="vertical" />
+      <a href="javascript:;">Delete</a>
     </span>
   )
 }
@@ -64,18 +77,12 @@ class TableTest extends React.Component {
           title="Tags"
           dataIndex="tags"
           key="tags"
-          render={test}
+          render={tagsHandle}
         />
         <Column
           title="Action"
           key="action"
-          render={(text, record) => (
-            <span>
-              <a href="javascript:;">Invite {record.lastName}</a>
-              <Divider type="vertical" />
-              <a href="javascript:;">Delete</a>
-            </span>
-          )}
+          render={recordHandle}
         />
       </Table>
     );

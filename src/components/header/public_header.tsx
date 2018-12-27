@@ -7,12 +7,12 @@ const { Header } = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
-interface IPropsType {
+interface IpropsType {
   collapsed: boolean,
   toggleCollapsed: () => any
 }
 
-class PublicHeader extends React.Component<IPropsType, {}>{
+class PublicHeader extends React.Component<IpropsType, {}>{
 
   public render() {
     return (
