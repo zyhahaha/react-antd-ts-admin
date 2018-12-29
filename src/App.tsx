@@ -5,7 +5,6 @@ import PublicSide from './components/side/public_side';
 import Routes from './router/index';
 import Login from './pages/login/login';
 
-// test
 import { Layout } from 'antd';
 const { Content, Footer } = Layout;
 
@@ -21,7 +20,7 @@ class App extends React.Component {
   }
 
   public render() {
-    const noLogin = true;
+    const noLogin = false;
     return (
       noLogin ? <Login /> : 
       <div className="main">
@@ -40,22 +39,5 @@ class App extends React.Component {
     );
   }
 }
-// test
-
-// class App extends React.Component {
-//   public render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h1 className="App-title">Welcome to React</h1>
-//         </header>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
 
 export default App;
