@@ -1,5 +1,8 @@
 import * as React from 'react';
 import './header.less';
+const screenfull = require('screenfull');
+// import screenfull = require('screenfull');
+// import {screenfull} from 'screenfull';
 
 import { Badge, Icon, Layout, Menu } from 'antd';
 const { Header } = Layout;
@@ -13,6 +16,12 @@ interface IpropsType {
 }
 
 class PublicHeader extends React.Component<IpropsType, {}>{
+
+  screenFull = () => {
+    if (screenfull.enabled) {
+      screenfull.request();
+    }
+  };
 
   public render() {
     return (
@@ -31,7 +40,7 @@ class PublicHeader extends React.Component<IpropsType, {}>{
           <Menu.Item key="pwa">
             {/* <PwaInstaller /> */}
           </Menu.Item>
-          <Menu.Item key="full" >
+          <Menu.Item key="full" onClick={this.screenFull}>
             <Icon type="arrows-alt" />
           </Menu.Item>
           <Menu.Item key="1">
