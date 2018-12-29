@@ -1,8 +1,6 @@
 import * as React from 'react';
+import * as screenfull from 'screenfull';
 import './header.less';
-const screenfull = require('screenfull');
-// import screenfull = require('screenfull');
-// import {screenfull} from 'screenfull';
 
 import { Badge, Icon, Layout, Menu } from 'antd';
 const { Header } = Layout;
@@ -17,7 +15,7 @@ interface IpropsType {
 
 class PublicHeader extends React.Component<IpropsType, {}>{
 
-  screenFull = () => {
+  public screenFull = () => {
     if (screenfull.enabled) {
       screenfull.request();
     }
