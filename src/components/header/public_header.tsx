@@ -46,7 +46,7 @@ class PublicHeader extends React.Component<IpropsType, {}>{
               <Icon type="notification" />
             </Badge>
           </Menu.Item>
-          <SubMenu title={<span className="avatar"><img style={{ width: '20px' }} src="./test.jpg" alt="头像" /><i className="on bottom b-white" /></span>}>
+          <SubMenu title={<span className="avatar"><img style={{ width: '20px' }} src="./assets/images/test.jpg" alt="头像" /><i className="on bottom b-white" /></span>}>
             <MenuItemGroup title="用户中心">
               <Menu.Item key="setting:1">你好 - test</Menu.Item>
               <Menu.Item key="setting:2">个人信息</Menu.Item>
