@@ -3,6 +3,7 @@ import './App.less';
 import PublicHeader from './components/header/public_header';
 import PublicSide from './components/side/public_side';
 import Routes from './router/index';
+import Login from './pages/login/login';
 
 // test
 import { Layout } from 'antd';
@@ -20,7 +21,9 @@ class App extends React.Component {
   }
 
   public render() {
+    const noLogin = true;
     return (
+      noLogin ? <Login /> : 
       <div className="main">
         <PublicSide collapsed={this.state.collapsed} />
         {/*  main */}
