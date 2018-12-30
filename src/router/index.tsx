@@ -5,12 +5,14 @@ import NotFound from '../components/NotFound/NotFound';
 
 // pages
 import TableTest from '../pages/table/table_test';
+import ReactAppTable from '../pages/react_app/react_app';
 
 const BasicRoute = () => (
   <BrowserRouter>
     <Switch>
       <Route exact={true} path="/PublicSide" component={ PublicSide } />
       <Route exact={true} path="/TableTest" component={ TableTest } />
+      <Route exact={true} path="/reactAppTable" component={ ReactAppTable } />
       <Route exact={true} path="/404" component={ NotFound } />
       <Redirect to="/404" />
     </Switch>
