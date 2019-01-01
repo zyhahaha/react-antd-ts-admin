@@ -102,7 +102,7 @@ class TableTest extends React.Component {
   // }
 
   public getHomeContentData() {
-    axios.get('http://localhost:8088/homeContentData').then(res => {
+    axios.get('http://192.168.1.11:8088/homeContentData').then(res => {
       const homeContentData = res.data.data;
         this.setState({
           homeContentData
