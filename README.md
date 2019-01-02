@@ -1,3 +1,14 @@
+### 技术栈
+```
+  主要: react, typescript, antd, less
+```
+
+```
+  未使用: redux
+```
+
+### ===========================================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
